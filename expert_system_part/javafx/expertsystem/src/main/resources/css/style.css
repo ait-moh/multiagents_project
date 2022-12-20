@@ -1,0 +1,305 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: oblique;
+    font-weight: bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: oblique;
+    font-weight: bold;
+    src: url('../fonts/RobotoMono-Bold.ttf');
+}
+
+#root, #rootBorderPane, #rootsc {
+    -fx-font-size : 14px;
+    -fx-font-family : 'Roboto';
+    -fx-border-width : 1px;
+    -fx-padding : 10px 10px 10px 10px;
+    -fx-spacing : 20px;
+    -fx-alignment : "center";
+    -fx-background-color : linear-gradient(from 30% 30% to 100% 100%,#E48257,#007965);
+}
+
+/* TOP */
+#titleLabel{
+    -fx-font-family : "Lucida Sans Unicode";
+    -fx-font-size : 26px;
+}
+#titleHBox {
+    -fx-alignment : center;
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10; 
+    -fx-min-height : 40;
+    -fx-padding : 7 5 7 5;
+}
+
+/* CENTER */
+#tableVBox {
+    -fx-alignment : top-left;
+    -fx-spacing : 20;
+    -fx-background-radius: 10; 
+}
+.table-view {
+     -fx-background-color: transparent;
+     -fx-font-family: "Segoe UI Semibold";
+     -fx-font-size:11px;
+    -fx-pref-width : 700;
+    -fx-pref-height : 400;
+ }
+ .table-view .column-header-background .filler {
+     -fx-background-color: transparent;
+ }
+ .table-view .corner {
+     -fx-background-color: transparent;
+ }
+ .table-view .column-header-background{
+     -fx-background-color: rgba(127, 214, 173, 0.3);
+     -fx-background-radius: 7px 7px 0px 0px;
+     -fx-padding: 5px 0 5px 0;
+
+ }
+ .table-view .column-header {
+     -fx-background-color: transparent;
+     -fx-text-fill: white;
+ }
+ .table-view .table-cell{
+     -fx-border-color: transparent;
+     -fx-padding: 2 0 2 10px;
+     /*-fx-text-fill: white;*/
+ }
+ .table-row-cell:odd {
+     -fx-background-color: rgba(140, 207, 160, 0.3);
+     -fx-background-insets: 0, 0 0 1 0;
+     -fx-padding: 0.0em;
+ }
+ .table-row-cell:even{
+     -fx-background-color: rgba(90, 246, 155, 0.22);
+     -fx-background-insets: 0, 0 0 1 0;
+     -fx-padding: 0.0em;
+ }
+ .table-view .virtual-flow .scroll-bar:vertical,
+ .table-view .virtual-flow .scroll-bar:vertical .track,
+ .table-view .virtual-flow .scroll-bar:vertical .track-background,
+ .table-view .virtual-flow .scroll-bar:horizontal,
+ .table-view .virtual-flow .scroll-bar:horizontal .track,
+ .table-view .virtual-flow .scroll-bar:horizontal .track-background {
+     -fx-background-color: transparent;
+ }
+ .table-view .virtual-flow .scroll-bar .increment-button,
+ .table-view .virtual-flow .scroll-bar .decrement-button , text-area.scroll-pane {
+     -fx-opacity: 0;
+     -fx-padding: 2;
+ }
+ .table-view .virtual-flow .scroll-bar:vertical .thumb,text-area.scroll-pane {
+     -fx-background-color:  linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+ }
+
+ .table-view .virtual-flow .scroll-bar:horizontal .thumb,text-area.scroll-pane  {
+     -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b944);
+ }
+#buttonsHBox {
+    -fx-spacing : 20;
+    -fx-alignment : top-right;
+}
+
+.button, .menu-button, .combo-box{
+ -fx-font-size: 15px;
+ -fx-border-width: 0;
+ -fx-background-radius: 7px ;
+ -fx-background-color: #007965;
+ -fx-font-size: 1em; /* 12 */
+ -fx-text-fill: black;
+ -fx-pref-width:150;
+}
+.menu-bar > .container >{
+    -fx-background-color: black;
+}
+.menu-item .label {
+     -fx-border-style: solid;
+      -fx-border-width: 1;
+      -fx-border-color: transparent;
+      -fx-background-color: transparent;
+      -fx-background-insets: 0, 1;
+      -fx-padding: 1 10;
+      -fx-text-fill: black;
+}
+.menu-item .label:hover{
+-fx-background-color: #E48257 !important;
+}
+/* RIGHT */
+#rightVBox {
+    -fx-spacing : 5;
+    -fx-pref-width : 500;
+    -fx-pref-height : 500;
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10;
+}
+#variablesVBox {
+    -fx-alignment : "center";
+    -fx-spacing : 1.5;
+    -fx-padding:5;
+   /* -fx-font-size : 14px;
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10;
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, white;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px; */
+}
+#variablesVBox > .text-field {
+    -fx-background-color:#F0E5D8;
+}
+#variablesVBox > .label {
+    -fx-font-size:16px;
+    -fx-padding:1;
+}
+.text-area {
+    -fx-pref-column-count : 60;
+    -fx-pref-row-count : 10;
+    -fx-wrap-text : true;
+    -fx-font-family : "Roboto Mono";
+    -fx-font-weight : bold;
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10;
+}
+.context-menu {
+
+    -fx-background-color: rgb(58, 138, 127);
+}
+
+.combo-box-base{
+  -fx-background-color: #007965;
+  -fx-padding: 2 2;
+  -fx-pref-width: 200;
+  -fx-text-fill: black;
+}
+
+.combo-box-base:editable{
+  -fx-background-color: rgba(52, 58, 50, 0.671);
+}
+
+.combo-box-base:editable > .text-field {
+  -fx-border-image-source: null;
+  -fx-background-color: transparent;
+  -fx-padding: 1 0;
+}
+
+.combo-box-base > .arrow-button {
+ -fx-padding: 0 4;
+}
+
+.combo-box-base > .arrow-button > .arrow{
+  -fx-background-color: black;
+  -fx-background-insets: 0 0 0 0;
+  -fx-padding: 2 4;
+  -fx-shape: "M 0 0 H 7 L 3.5 4 z";
+}
+
+.combo-box-popup > .list-view, .menu-button > .list-view{
+  -fx-border-style: solid;
+  -fx-border-width: 1;
+  -fx-border-color: transparent;
+  -fx-background-color: transparent;
+  -fx-background-insets: 0, 1;
+  -fx-pref-width: 200;
+  -fx-text-fill: black;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+  -fx-padding: 1 10;
+  -fx-background-color: rgb(58, 138, 127);
+  -fx-text-fill: black;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+  -fx-background: green;
+  -fx-background-color: #E48257 !important;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+  -fx-background-color: rgba(58, 94, 70, 0.616) !important;
+}
+.combo-box:disabled, .combo-box:disabled > * ,button:disabled , menu-button{
+  -fx-opacity: 1.0 ;
+
+}
+.menu-button{
+    -fx-mark-color: black;
+    -fx-text-fill: black;
+}
+
+#logTextArea{
+    -fx-control-inner-background: black;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: Consolas;
+    -fx-focus-color: transparent;
+    -fx-padding:5;
+    -fx-border-style: solid;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+text-area.scroll-pane {
+-fx-border-color:black;
+}
+text-area .scroll-pane > .corner {
+    -fx-background-color: black;
+}
+.scroll-pane {
+    -fx-background-color: black;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :black;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+    -fx-pref-width:2px;
+}
+
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :white;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color : white;
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}

@@ -1,0 +1,367 @@
+{
+    "variables" : [
+        {
+            "name" : "utilisation",
+            "values" : [
+                "industrielle",
+                "décoration"
+            ] 
+        },
+        {
+            "name" : "type bois",
+            "values" : [
+                "fibres",
+                "essence dure",
+                "essence tendre"
+            ] 
+        },
+        {
+            "name" : "bois",
+            "values" : [
+                "mdf",
+                "osb",
+                "noyer",
+                "chêne",
+                "érable",
+                "frêne",
+                "cèdre",
+                "sapin",
+                "épicéa",
+                "pin"
+            ] 
+        },
+        {
+            "name" : "meuble",
+            "values" : [
+                "intérieur",
+                "extérieur"
+            ] 
+        },
+        {
+            "name" : "solide",
+            "values" : [
+                "true",
+                "false"
+            ] 
+        },
+        {
+            "name" : "couleur",
+            "values" : [
+                "foncée",
+                "claire"
+            ] 
+        },
+        {
+            "name" : "cher",
+            "values" : [
+                "true",
+                "false"
+            ] 
+        }
+    ],
+    "target" : "bois",
+    "memory" : [
+        {
+            "variable" : "utilisation",
+            "value" : "industrielle"
+        },
+        {
+            "variable" : "solide",
+            "value" : "true"
+        }
+    ],
+    "knowledge base" : [
+        {
+            "label" : "industrielle",
+            "antecedents" : [
+                {
+                    "variable" : "utilisation",
+                    "condition" : "=",
+                    "value" : "industrielle"
+                }
+            ],
+            "consequent" : {
+                "variable" : "type bois",
+                "condition" : "=",
+                "value" : "fibres"
+            }
+        },
+        {
+            "label" : "mdf",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "fibres"
+                },
+                {
+                    "variable" : "solide",
+                    "condition" : "=",
+                    "value" : "true"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "mdf"
+            }
+        },
+        {
+            "label" : "osb",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "fibres"
+                },
+                {
+                    "variable" : "solide",
+                    "condition" : "=",
+                    "value" : "false"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "osb"
+            }
+        },
+
+        {
+            "label" : "dure",
+            "antecedents" : [
+                {
+                    "variable" : "utilisation",
+                    "condition" : "=",
+                    "value" : "décoration"
+                },
+                {
+                    "variable" : "meuble",
+                    "condition" : "=",
+                    "value" : "intérieur"
+                }
+            ],
+            "consequent" : {
+                "variable" : "type bois",
+                "condition" : "=",
+                "value" : "essence dure"
+            }
+        },
+        {
+            "label" : "noyer",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence dure"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "foncée"
+                },
+                {
+                    "variable" : "cher",
+                    "condition" : "=",
+                    "value" : "true"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "noyer"
+            }
+        },
+        {
+            "label" : "chêne",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence dure"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "foncée"
+                },
+                {
+                    "variable" : "cher",
+                    "condition" : "=",
+                    "value" : "false"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "chêne"
+            }
+        },
+        {
+            "label" : "érable",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence dure"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "claire"
+                },
+                {
+                    "variable" : "cher",
+                    "condition" : "=",
+                    "value" : "true"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "érable"
+            }
+        },
+        {
+            "label" : "frêne",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence dure"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "claire"
+                },
+                {
+                    "variable" : "cher",
+                    "condition" : "=",
+                    "value" : "false"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "frêne"
+            }
+        },
+
+        {
+            "label" : "tendre",
+            "antecedents" : [
+                {
+                    "variable" : "utilisation",
+                    "condition" : "=",
+                    "value" : "décoration"
+                },
+                {
+                    "variable" : "meuble",
+                    "condition" : "=",
+                    "value" : "extérieur"
+                }
+            ],
+            "consequent" : {
+                "variable" : "type bois",
+                "condition" : "=",
+                "value" : "essence tendre"
+            }
+        },
+        {
+            "label" : "cèdre",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence tendre"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "foncée"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "cèdre"
+            }
+        },
+        {
+            "label" : "sapin",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence tendre"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "foncée"
+                },
+                {
+                    "variable" : "cher",
+                    "condition" : "=",
+                    "value" : "false"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "sapin"
+            }
+        },
+        {
+            "label" : "épicia",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence tendre"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "claire"
+                },
+                {
+                    "variable" : "cher",
+                    "condition" : "=",
+                    "value" : "true"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "épicéa"
+            }
+        },
+        {
+            "label" : "pin",
+            "antecedents" : [
+                {
+                    "variable" : "type bois",
+                    "condition" : "=",
+                    "value" : "essence tendre"
+                },
+                {
+                    "variable" : "couleur",
+                    "condition" : "=",
+                    "value" : "claire"
+                },
+                {
+                    "variable" : "cher",
+                    "condition" : "=",
+                    "value" : "false"
+                }
+            ],
+            "consequent" : {
+                "variable" : "bois",
+                "condition" : "=",
+                "value" : "pin"
+            }
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "variables" : [
+        {
+            "name" : "v1",
+            "values" : [
+                "1",
+                "2"
+            ]
+        },
+        {
+            "name" : "v2",
+            "values" : [
+                "1",
+                "2"
+            ]
+        }
+    ],
+    "target" : "v2",
+    "memory" : [
+        {
+            "variable" : "v1",
+            "value" : "1"
+        }
+    ],
+    "knowledge base" : [
+        {
+            "label" : "r1",
+            "antecedents" : [
+                {
+                    "variable" : "v1",
+                    "condition" : "=",
+                    "value" : "1"
+                }
+            ],
+            "consequent" : {
+                "variable" : "v2",
+                "condition" : "=",
+                "value" : "2"
+            }
+        }
+    ]
+}

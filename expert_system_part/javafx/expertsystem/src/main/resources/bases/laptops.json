@@ -1,0 +1,294 @@
+{
+    "variables" : [
+        {
+            "name" : "fonction",
+            "values" : [
+                "office",
+                "jeux",
+                "pro"
+            ]
+        },
+        {
+            "name" : "office categorie",
+            "values" : [
+                "chromebook",
+                "ultrabook"
+            ]
+        },
+        {
+            "name" : "prix",
+            "values" : [
+                "cher",
+                "pas cher"
+            ]
+        },
+        {
+            "name" : "poids",
+            "values" : [
+                "leger",
+                "lourd"
+            ]
+        },
+        {
+            "name" : "autonomie",
+            "values" : [
+                "haute",
+                "basique"
+            ]
+        },
+        {
+            "name" : "utilisation pro",
+            "values" : [
+                "multimedia",
+                "workstation"
+            ]
+        },
+        {
+            "name" : "laptop",
+            "values" : [
+                "asus chromebook",
+                "samsung chromebook",
+                "hp probook",
+                "dell xps 13",
+                "razer blade",
+                "acer nitro 5",
+                "lenovo legion 5",
+                "apple macbook",
+                "lenovo thinkpad",
+                "hp zbook"
+            ]
+        }
+    ],
+    "target" : "laptop",
+    "memory" : [
+        {
+            "variable" : "fonction",
+            "value" : "office"
+        },
+        {
+            "variable" : "autonomie",
+            "value" : "haute"
+        },
+        {
+            "variable" : "prix",
+            "value" : "pas cher"
+        }
+    ],
+    "knowledge base" : [
+        {
+            "label" : "chromebook",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "office"
+                }
+            ],
+            "consequent" : {
+                "variable" : "office categorie",
+                "condition" : "=",
+                "value" : "chromebook"
+            }
+        },
+        {
+            "label" : "ultrabook",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "office"
+                },
+                {
+                    "variable" : "autonomie",
+                    "condition" : "=",
+                    "value" : "haute"
+                }
+            ],
+            "consequent" : {
+                "variable" : "office categorie",
+                "condition" : "=",
+                "value" : "ultrabook"
+            }
+        },
+        {
+            "label" : "asus chromebook",
+            "antecedents" : [
+                {
+                    "variable" : "office categorie",
+                    "condition" : "=",
+                    "value" : "chromebook"
+                },
+                {
+                    "variable" : "prix",
+                    "condition" : "=",
+                    "value" : "pas cher"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "asus chromebook"
+            }
+        },
+        {
+            "label" : "samsung chromebook",
+            "antecedents" : [
+                {
+                    "variable" : "office categorie",
+                    "condition" : "=",
+                    "value" : "chromebook"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "samsung chromebook"
+            }
+        },
+        {
+            "label" : "hp probook",
+            "antecedents" : [
+                {
+                    "variable" : "office categorie",
+                    "condition" : "=",
+                    "value" : "ultrabook"
+                },
+                {
+                    "variable" : "prix",
+                    "condition" : "=",
+                    "value" : "pas cher"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "hp probook"
+            }
+        },
+        {
+            "label" : "dell xps 13",
+            "antecedents" : [
+                {
+                    "variable" : "office categorie",
+                    "condition" : "=",
+                    "value" : "ultrabook"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "dell xps 13"
+            }
+        },
+        {
+            "label" : "razer blade",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "jeux"
+                },
+                {
+                    "variable" : "poids",
+                    "condition" : "=",
+                    "value" : "leger"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "razer blade"
+            }
+        },
+        {
+            "label" : "acer nitro 5",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "jeux"
+                },
+                {
+                    "variable" : "prix",
+                    "condition" : "=",
+                    "value" : "pas cher"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "acer nitro 5"
+            }
+        },
+        {
+            "label" : "lenovo legion 5",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "jeux"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "lenovo legion 5"
+            }
+        },
+        {
+            "label" : "apple macbook",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "pro"
+                },
+                {
+                    "variable" : "utilisation pro",
+                    "condition" : "=",
+                    "value" : "multimedia"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "apple macbook"
+            }
+        },
+        {
+            "label" : "lenovo thinkpad",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "pro"
+                },
+                {
+                    "variable" : "utilisation pro",
+                    "condition" : "=",
+                    "value" : "workstation"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "lenovo thinkpad"
+            }
+        },
+        {
+            "label" : "hp zbook",
+            "antecedents" : [
+                {
+                    "variable" : "fonction",
+                    "condition" : "=",
+                    "value" : "pro"
+                }
+            ],
+            "consequent" : {
+                "variable" : "laptop",
+                "condition" : "=",
+                "value" : "hp zbook"
+            }
+        }
+    ]
+}
