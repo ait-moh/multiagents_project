@@ -1,0 +1,127 @@
+{
+    "name" : "Technomania",
+    "stock" : [
+        {
+            "category" : "laptop",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "asus",
+                    "color" : "black",
+                    "ram" : "8",
+                    "cpu" : "intel i3",
+                    "screen size" : "15",
+                    "quantity" : "5",
+                    "price" : "60000",
+                    "bundle" : "1"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "lenovo",
+                    "color" : "silver",
+                    "ram" : "16",
+                    "cpu" : "intel i7",
+                    "screen size" : "14",
+                    "quantity" : "2",
+                    "price" : "100000",
+                    "bundle" : "2"
+                },
+                {
+                    "id" : "3",
+                    "brand" : "hp",
+                    "color" : "white",
+                    "ram" : "8",
+                    "cpu" : "amd ryzen 5",
+                    "screen size" : "15",
+                    "quantity" : "1",
+                    "price" : "130000",
+                    "bundle" : "1"
+                }
+            ]
+        },
+        {
+            "category" : "ram",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "samsung",
+                    "capacity" : "8",
+                    "quantity" : "4",
+                    "price" : "9000"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "corsair",
+                    "capacity" : "16",
+                    "quantity" : "2",
+                    "price" : "20000"
+                }
+            ]
+        },
+        {
+            "category" : "cd",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "memo",
+                    "capacity" : "5",
+                    "quantity" : "5",
+                    "price" : "35"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "cdouze",
+                    "capacity" : "2",
+                    "quantity" : "2",
+                    "price" : "40"
+                }
+            ]
+        },
+        {
+            "category" : "usb",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "cruzer",
+                    "capacity" : "7",
+                    "quantity" : "6",
+                    "price" : "950"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "adata",
+                    "capacity" : "16",
+                    "quantity" : "2",
+                    "price" : "1600"
+                }
+            ]
+        }
+    ],
+    "promotions" : [
+        {
+            "id" : "1",
+            "title" : "Good fortune",
+            "start month" : "10",
+            "start day" : "22",
+            "end month" : "10",
+            "end day" : "23",
+            "discount" : "10"
+        }
+    ],
+    "bundles" : [
+        {
+            "id" : "1",
+            "category" : "ram",
+            "item id" : "1",
+            "quantity" : "1",
+            "discount" : "10"
+        },
+        {
+            "id" : "2",
+            "category" : "ram",
+            "item id" : "2",
+            "quantity" : "1",
+            "discount" : "15"
+        }
+    ]
+}

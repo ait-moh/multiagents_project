@@ -1,0 +1,54 @@
+{
+    "name" : "CD Land",
+    "stock" : [
+        {
+            "category" : "cd",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "vevo",
+                    "capacity" : "4",
+                    "quantity" : "4",
+                    "price" : "30"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "cdouze",
+                    "capacity" : "2",
+                    "quantity" : "2",
+                    "price" : "40"
+                }
+            ]
+        },
+        {
+            "category" : "usb",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "samsung",
+                    "capacity" : "8",
+                    "quantity" : "4",
+                    "price" : "900"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "kingston",
+                    "capacity" : "16",
+                    "quantity" : "3",
+                    "price" : "1500"
+                }
+            ]
+        }
+    ],
+    "promotions" : [
+        {
+            "id" : "1",
+            "title" : "Bad fortune",
+            "start month" : "4",
+            "start day" : "1",
+            "end month" : "4",
+            "end day" : "2",
+            "discount" : "69"
+        }
+    ]
+}

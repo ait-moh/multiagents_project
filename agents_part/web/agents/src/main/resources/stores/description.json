@@ -1,0 +1,46 @@
+[
+    {
+        "category" : "laptop",
+        "features" : [
+            "id",
+            "brand",
+            "color",
+            "ram",
+            "cpu",
+            "screen size",
+            "quantity",
+            "price",
+            "bundle"
+        ]
+    },
+    {
+        "category" : "ram",
+        "features" : [
+            "id",
+            "brand",
+            "capacity",
+            "quantity",
+            "price"
+        ]
+    },
+    {
+        "category" : "cd",
+        "features" : [
+            "id",
+            "brand",
+            "price",
+            "quntity",
+            "capacity"
+        ]
+    },
+    {
+        "category" : "usb",
+        "features" : [
+            "id",
+            "brand",
+            "price",
+            "quntity",
+            "capacity"
+        ]
+    }
+]

@@ -1,0 +1,89 @@
+{
+    "name" : "Blue Berry",
+    "stock" : [
+        {
+            "category" : "laptop",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "acer",
+                    "color" : "black",
+                    "ram" : "8",
+                    "cpu" : "intel i3",
+                    "screen size" : "15",
+                    "quantity" : "3",
+                    "price" : "50000"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "lenovo",
+                    "color" : "silver",
+                    "ram" : "16",
+                    "cpu" : "intel i7",
+                    "screen size" : "14",
+                    "quantity" : "2",
+                    "price" : "100000"
+                },
+                {
+                    "id" : "3",
+                    "brand" : "lenovo",
+                    "color" : "white",
+                    "ram" : "8",
+                    "cpu" : "amd ryzen 5",
+                    "screen size" : "15",
+                    "quantity" : "1",
+                    "price" : "135000"
+                }
+           ]
+        },
+        {
+            "category" : "usb",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "samsung",
+                    "capacity" : "8",
+                    "quantity" : "4",
+                    "price" : "900"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "adata",
+                    "capacity" : "16",
+                    "quantity" : "2",
+                    "price" : "1600"
+                }
+            ]
+        },
+        {
+            "category" : "cd",
+            "items" : [
+                {
+                    "id" : "1",
+                    "brand" : "memo",
+                    "capacity" : "5",
+                    "quantity" : "5",
+                    "price" : "35"
+                },
+                {
+                    "id" : "2",
+                    "brand" : "memorex",
+                    "capacity" : "3",
+                    "quantity" : "7",
+                    "price" : "45"
+                }
+            ]
+        }
+    ],
+    "promotions" : [
+        {
+            "id" : "1",
+            "title" : "Happy new year",
+            "start month" : "12",
+            "start day" : "25",
+            "end month" : "1",
+            "end day" : "5",
+            "discount" : "13"
+        }
+    ]
+}
