@@ -1,0 +1,285 @@
+{
+    "variables" : [
+        {
+            "name" : "vehicule type",
+            "values" : [
+                "cycle",
+                "automobile"
+            ]
+        },
+        {
+            "name" : "number of wheels",
+            "values" : [
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        {
+            "name" : "motor",
+            "values" : [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "name" : "size",
+            "values" : [
+                "small",
+                "medium",
+                "large"
+            ]
+        },
+        {
+            "name" : "number of doors",
+            "values" : [
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        {
+            "name" : "vehicule",
+            "values" : [
+                "bicycle",
+                "tricycle",
+                "motocycle",
+                "sportcar",
+                "sedan",
+                "minivar",
+                "sportutilityvehicule"
+            ]
+        }
+    ],
+    "target" : "vehicule",
+    "memory" : [
+        {
+            "variable" : "number of wheels",
+            "value" : "4"
+        },
+        {
+            "variable" : "motor",
+            "value" : "yes"
+        },
+        {
+            "variable" : "number of doors",
+            "value" : "3"
+        },
+        {
+            "variable" : "size",
+            "value" : "medium"
+        }
+    ],
+    "knowledge base" : [
+        {
+            "label" : "bicycle",
+            "antecedents" : [
+                {
+                    "variable" : "vehicule type",
+                    "condition" : "=",
+                    "value" : "cycle"
+                },
+                {
+                    "variable" : "number of wheels",
+                    "condition" : "=",
+                    "value" : "2"
+                },
+                {
+                    "variable" : "motor",
+                    "condition" : "=",
+                    "value" : "no"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule",
+                "condition" : "=",
+                "value" : "bicycle"
+            }
+        },
+        {
+            "label" : "tricycle",
+            "antecedents" : [
+                {
+                    "variable" : "vehicule type",
+                    "condition" : "=",
+                    "value" : "cycle"
+                },
+                {
+                    "variable" : "number of wheels",
+                    "condition" : "=",
+                    "value" : "3"
+                },
+                {
+                    "variable" : "motor",
+                    "condition" : "=",
+                    "value" : "no"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule",
+                "condition" : "=",
+                "value" : "tricycle"
+            }
+        },
+        {
+            "label" : "motocycle",
+            "antecedents" : [
+                {
+                    "variable" : "vehicule type",
+                    "condition" : "=",
+                    "value" : "cycle"
+                },
+                {
+                    "variable" : "number of wheels",
+                    "condition" : "=",
+                    "value" : "2"
+                },
+                {
+                    "variable" : "motor",
+                    "condition" : "=",
+                    "value" : "yes"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule",
+                "condition" : "=",
+                "value" : "motocycle"
+            }
+        },
+        {
+            "label" : "sportcar",
+            "antecedents" : [
+                {
+                    "variable" : "vehicule type",
+                    "condition" : "=",
+                    "value" : "automobile"
+                },
+                {
+                    "variable" : "size",
+                    "condition" : "=",
+                    "value" : "small"
+                },
+                {
+                    "variable" : "number of doors",
+                    "condition" : "=",
+                    "value" : "2"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule",
+                "condition" : "=",
+                "value" : "sportcar"
+            }
+        },
+        {
+            "label" : "sedan",
+            "antecedents" : [
+                {
+                    "variable" : "vehicule type",
+                    "condition" : "=",
+                    "value" : "automobile"
+                },
+                {
+                    "variable" : "size",
+                    "condition" : "=",
+                    "value" : "medium"
+                },
+                {
+                    "variable" : "number of doors",
+                    "condition" : "=",
+                    "value" : "4"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule",
+                "condition" : "=",
+                "value" : "sedan"
+            }
+        },
+        {
+            "label" : "minivar",
+            "antecedents" : [
+                {
+                    "variable" : "vehicule type",
+                    "condition" : "=",
+                    "value" : "automobile"
+                },
+                {
+                    "variable" : "size",
+                    "condition" : "=",
+                    "value" : "medium"
+                },
+                {
+                    "variable" : "number of doors",
+                    "condition" : "=",
+                    "value" : "3"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule",
+                "condition" : "=",
+                "value" : "minivar"
+            }
+        },
+        {
+            "label" : "suv",
+            "antecedents" : [
+                {
+                    "variable" : "vehicule type",
+                    "condition" : "=",
+                    "value" : "automobile"
+                },
+                {
+                    "variable" : "size",
+                    "condition" : "=",
+                    "value" : "large"
+                },
+                {
+                    "variable" : "number of doors",
+                    "condition" : "=",
+                    "value" : "4"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule",
+                "condition" : "=",
+                "value" : "sportutilityvehicule"
+            }
+        },
+        {
+            "label" : "cycle",
+            "antecedents" : [
+                {
+                    "variable" : "number of wheels",
+                    "condition" : "<",
+                    "value" : "4"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule type",
+                "condition" : "=",
+                "value" : "cycle"
+            }
+        },
+        {
+            "label" : "automobile",
+            "antecedents" : [
+                {
+                    "variable" : "number of wheels",
+                    "condition" : "=",
+                    "value" : "4"
+                },
+                {
+                    "variable" : "motor",
+                    "condition" : "=",
+                    "value" : "yes"
+                }
+            ],
+            "consequent" : {
+                "variable" : "vehicule type",
+                "condition" : "=",
+                "value" : "automobile"
+            }
+        }
+    ]
+}
